@@ -1,0 +1,22 @@
+snippet mount def mount(...) do ... end
+	def mount(params, _session, socket) do
+		${0}
+	end
+snippet render def render(assigns) do ... end
+	def render(assigns) do
+		~H"""
+		${0}
+		"""
+	end
+snippet hp def handle_params(...) do ... end
+	def handle_params(params, _uri, socket) do
+		${0}
+	end
+snippet he def handle_event(...) do ... end
+	def handle_event(event, params, socket) do
+		${0}
+	end
+snippet hi def handle_info(...) do ... end
+	def handle_info(message, socket) do
+		${0}
+	end
