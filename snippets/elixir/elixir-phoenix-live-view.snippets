@@ -1,5 +1,7 @@
+extends eelixir
+
 snippet mount def mount(...) do ... end
-	def mount(params, _session, socket) do
+	def mount(${1:params}, ${2:_session}, ${3:socket}) do
 		${0}
 	end
 snippet render def render(assigns) do ... end
@@ -9,14 +11,22 @@ snippet render def render(assigns) do ... end
 		"""
 	end
 snippet hp def handle_params(...) do ... end
-	def handle_params(params, _uri, socket) do
+	def handle_params(${1:params}, ${2:_uri}, ${3:socket}) do
 		${0}
 	end
 snippet he def handle_event(...) do ... end
-	def handle_event(event, params, socket) do
+	def handle_event(${1:event}, ${2:params}, ${3:socket}) do
 		${0}
 	end
 snippet hi def handle_info(...) do ... end
-	def handle_info(message, socket) do
+	def handle_info(${1:message}, ${2:socket}) do
+		${0}
+	end
+snippet update def update(...) do ... end
+	def update(${1:assigns}, ${2:socket}) do
+		${0}
+	end
+snippet terminate def terminate(...) do ... end
+	def terminate(${1:_reason}, ${2:socket}) do
 		${0}
 	end
